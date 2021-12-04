@@ -1,6 +1,3 @@
-import logging
-from os import access
-
 from Account import Account
 
 class SwiftFruit:
@@ -11,7 +8,6 @@ class SwiftFruit:
     self.account = account
 
   def run(self):
-    logging.info("Running SwiftFruit!")
     self.strategy.getInfo(self.interval, self.dates, self.account)
     if self.account.live:
       self.runLive()
@@ -21,7 +17,6 @@ class SwiftFruit:
   def runTest(self):
     self.account.update()
     self.strategy.run()
-    logging.info("Running Back Tester!")
 
   def runLive(self):
-    logging.info("Running Live!")
+    pass

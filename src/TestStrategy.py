@@ -1,12 +1,9 @@
 from Strategy import Strategy
 import numpy, talib
 
-import logging
-
 class TestStrategy(Strategy):
     def __init__(self):
-        logger = logging.getLogger('example_logger')
-        logger.warning('This is a warning')
+
         self.symbol = "DOGEUSDT"
 
     def getInfo(self, interval, dates, account):
